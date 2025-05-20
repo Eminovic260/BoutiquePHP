@@ -10,13 +10,16 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./index.html">Accueil</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./equipe.html">Équipe</a>
+                        <a class="nav-link" href="item.php">Poisson</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link" href="item2.php">Crevette</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="item3.php">Sardine</a>
                     </li>
                 </ul>
             </div>

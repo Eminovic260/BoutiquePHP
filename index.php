@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name = "index" content ="acceuil">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,9 +19,7 @@
 
     <main>
         <p>Bienvenue sur la page d'accueil.</p>
-        <a href="item.php">Voir le Poisson</a>
-        <a href="item2.php">Voir la Sardine</a>
-        <a href="item3.php">Voir la Crevette</a>
+        
     </main>
 
 
