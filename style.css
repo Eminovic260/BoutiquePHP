@@ -1,178 +1,52 @@
 body {
     font-family: "Inria Serif", serif;
+    color: #f1f1f1;
 }
 
 
 h1 {
     font-size: 5vw;
-   
+
 }
 
 h2 {
+    margin-top: 5rem;
     margin-bottom: 5%;
     font-size: 2vw;
+    margin-left: 3rem;
 }
 
 h3 {
-    margin: 1%;
-    font-size: 1.5vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border: solid 1px white;
+    padding: 1rem;
+    text-align: center;
 }
 
 h4 {
     font-size: 1vw
 }
 
-li {
-    font-size: 1vw;
-}
-
-li {
-    font-size: 1vw;
-}
-
 p {
-    margin-bottom: 1%;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1rem;
 }
-
-
-.btnbody {
-    color: white;
-    font-size: 1.5em;
-    background: linear-gradient(to left, #02002F, #0E005F, #1A0189)
-}
-
-
-/* -----------------------------------CSS choix profil----------------------------------- */
-.img_profil_1,
-.img_profil_2,
-.img_profil_3 {
-    width: 20vw;
-}
-
-.grid-layout { 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: auto;
-    /* Pour que la div prenne toute la hauteur de la page */
-    width: 100%;
-}
-
-
-
-.profil_1 h2,
-.profil_2 h2,
-.profil_3 h2 {
-
-    font-size: 3vw;
-}
-
-
-@media screen and (min-width: 768px) {
-    .grid-layout {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        /* 12 colonnes égales */
-        grid-template-areas:
-            "h h h h h h h h h h h h"
-            ". . t t . . . . . . . ."
-            ". . . . . . . . . . . ."
-            ". . . p p p p p p . . ."
-            ". . . p p p p p p . . ."
-            ". . . . . . . . . . . ."
-            ". pa . . . . . . . . . ."
-            ". a . at at at at at . . . ."
-            ". . . . . . . . . . . ."
-            ". . . . . . . . . . pe ."
-            ". . . . et et et et et . e ."
-            ". . . . . . . . . . . ."
-            ". pk . . . . . . . . . ."
-            ". k . tk tk tk tk tk tk . . ."
-            "f f f f f f f f f f f f";
-        gap: 20px;
-    }
-
-
-
-
-    .team {
-        grid-area: t;
-    }
-
-    .team_presentation {
-        grid-area: p;
-        margin-bottom: 20%;
-    }
-
-    .lien_profil_1 {
-        grid-area: a;
-        object-fit: cover;
-    }
-
-    .profil_1 {
-        grid-area: pa;
-    }
-
-    .t_profil_1 {
-
-        grid-area: at;
-
-    }
-
-    .lien_profil_2 {
-        grid-area: e;
-    }
-
-    .profil_2 {
-        grid-area: pe;
-    }
-
-    .t_profil_2 {
-        grid-area: et;
-    }
-
-    .lien_profil_3 {
-        grid-area: k;
-    }
-
-    .profil_3 {
-        grid-area: pk;
-    }
-
-    .t_profil_3 {
-        grid-area: tk;
-    }
-
-
-
-}
-
-
-
-
-
-
 
 /* ----------------------------------------- css HEADER ----------------------------------------- */
-
-header {
-    grid-area: h;
-}
 
 .logo {
     width: 8vw;
     justify-content: center;
 }
 
-/* .languess{
-    width: 10vw;
-} */
-
-.drapeau{
+.drapeau {
     width: 3vw;
 }
-.pays{
+
+.pays {
     padding-right: 1vw;
 }
 
@@ -183,8 +57,30 @@ header {
 
 footer {
     grid-area: f;
-    
+
 }
 
 
 
+
+
+
+.container4 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pdt {
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10rem;
+    box-shadow: #f1f1f1 0px 0px 20px 5px;
+    border-radius: 20px;
+}
+
+.imgI {
+    border-radius: 20px;
+    width: 25rem;
+    height: 18rem;
+}
