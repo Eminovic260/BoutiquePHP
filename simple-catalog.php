@@ -11,37 +11,39 @@ $keywords = "Liste, Prix, Image";
 
 
 
-    <main>
+<main>
 
-        <div>
-            <h2>Produits :</h2>
-        </div>
-
-
-
-        <div class="container4">
-            <?php foreach ($products as $product) : ?>
-                <div class="pdt">
-                    <a href="<?= $product['link'] ?>">
-                        <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
-                    </a>
-                    <h3><?= $product['name'] ?></h3>
-                    <p><?= "Prix : " . formatPrice($product['price']) ?></p>
-                    <p><?= "Poid : " . $product['weight'] . "Gr" ?></p>
-                    <p>
-                        <?php if ($product['discount'] !== null) : ?>
-                            <?= "Réduction avec le code 'Géraud' : " . $product['discount'] . "%" ?>
-                        <?php else: ?>
-                            <?= "Aucune réduction disponible" ?>
-                        <?php endif; ?>
-                    </p>
-                </div>
-            <?php endforeach; ?>
-        </div>
-
-    </main>
+    <div>
+        <h2>Produits :</h2>
+    </div>
 
 
 
-    <?php include('footer.php'); ?>
+    <div class="container4">
+        <?php foreach ($products as $product) : ?>
+            <div class="pdt">
+                <a href="<?= $product['link'] ?>">
+                    <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
+                </a>
+                <h3><?= $product['name'] ?></h3>
+                <p><?= "Prix TTC : " . formatPrice($product['price']) ?></p>
+                <p><?= "Prix HT : " . formatPrice(priceExcludingVAT($product['price'])) ?></p>
+                <p><?= "Poid : " . $product['weight'] . "Gr" ?></p>
+                <p>
+                    <?php if ($product['discount'] !== null) : ?>
+                <p>Prix remisé TTC : <?= discountedPrice($product['price'], $product['discount']) ?></p>
+                <p> <?= "Réduction avec le code 'Géraud' : " . $product['discount'] . "%" ?></p>
+            <?php else: ?>
+                <?= "Aucune réduction disponible" ?>
+            <?php endif; ?>
+            </p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+</main>
+
+
+
+<?php include('footer.php'); ?>
 </body>
