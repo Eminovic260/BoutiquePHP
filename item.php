@@ -1,36 +1,21 @@
 <?php
-// Définir les valeurs spécifiques pour la page d'accueil
 $title = "Poisson Rouge";
-$description = "Découvrez nos produits!";
-$keywords = "Poisson, Prix, Image";
+include('my-functions.php');
+
+$category = "Poisson Rouge";
+$filteredProducts = array_filter($products, function ($product) use ($category) {
+    return $product['category'] === $category;
+});
 ?>
 
 
-<?php include('header.php'); ?>
+
+    <?php include('header.php'); ?>
+
+    <h2>Produits : <?= $title ?></h2>
+
+    <?php renderProducts($filteredProducts); ?>
 
 
-<body style="background-color: #2e2e2e;">
-
-
-
-
-
-
-    <main>
-        <?php
-        $Nom = "Rouge Poisson";
-        $Prix = "10€";
-        $URL = "images/Poisson.jpg";
-
-        echo "Nom : <h2>$Nom</h2><br>";
-        echo "Prix : $Prix<br>";
-        echo "Image : <img src='$URL' alt='$Nom'>";
-        ?>
-
-    </main>
     <?php include('footer.php'); ?>
-
-
-
-
 </body>

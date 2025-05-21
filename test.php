@@ -22,3 +22,13 @@
             <p><?= "Réduction avec le code 'Géraud' : " . $products["Sardine"]["discount"] . "%" ?></p>
         </div>
     </div>
+
+
+
+
+     <?php
+        // $products = array("iPhone", "iPad", "iMac");
+        // sort($products);
+        // echo "<p>Premier produit : " . $products[0] . "</p>";
+        //  echo "<p>Dernier produit : " . $products[count($products) - 1] . "</p>";
+        ?>

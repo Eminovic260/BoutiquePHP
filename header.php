@@ -42,12 +42,10 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
                     <li class="nav-item">
                         <a class="nav-link" href="simple-catalog.php">Catalogue</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalog-with-keys.php">Catalogue en Clés</a>
-                    </li>
                 </ul>
             </div>
         </div>
 
     </nav>
 </header>
+<body style="background-color:rgb(46, 46, 46); color: white;">

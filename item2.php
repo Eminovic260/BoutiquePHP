@@ -1,28 +1,17 @@
 <?php
-// Définir les valeurs spécifiques pour la page d'accueil
 $title = "Crevette";
-$description = "Découvrez nos produits!";
-$keywords = "Crevette, Prix, Image";
+include('my-functions.php');
+
+$category = "Crevette";
+$filteredProducts = array_filter($products, function ($product) use ($category) {
+    return $product['category'] === $category;
+});
 ?>
 
 
-<?php include('header.php'); ?>
+    <?php include('header.php'); ?>
+    <h2>Produits : <?= $title ?></h2>
 
-<body style="background-color: #2e2e2e;">
-
-    <main>
-        <?php
-        $Nom = "Crevette";
-        $Prix = "20€";
-        $URL = "images/Crevette.jpg";
-
-        echo "Nom : <h2>$Nom</h2><br>";
-        echo "Prix : $Prix<br>";
-        echo "Image : <img src='$URL' alt='$Nom'>";
-        ?>
-
-    </main>
+    <?php renderProducts($filteredProducts); ?>
     <?php include('footer.php'); ?>
 </body>
-
-</html>

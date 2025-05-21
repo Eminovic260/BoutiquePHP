@@ -6,19 +6,42 @@ $keywords = "Liste, Prix, Image";
 ?>
 
 <?php include('header.php'); ?>
+<?php include('my-functions.php'); ?>
 
 
 
-<body style="background-color: #2e2e2e;">
+
     <main>
-        <?php
-        // $products = array("iPhone", "iPad", "iMac");
-        // sort($products);
-        // echo "<p>Premier produit : " . $products[0] . "</p>";
-        //  echo "<p>Dernier produit : " . $products[count($products) - 1] . "</p>";
-        ?>
-        <?php include('multidimensional-catalog.php'); ?>
+
+        <div>
+            <h2>Produits :</h2>
+        </div>
+
+
+
+        <div class="container4">
+            <?php foreach ($products as $product) : ?>
+                <div class="pdt">
+                    <a href="<?= $product['link'] ?>">
+                        <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
+                    </a>
+                    <h3><?= $product['name'] ?></h3>
+                    <p><?= "Prix : " . formatPrice($product['price']) ?></p>
+                    <p><?= "Poid : " . $product['weight'] . "Gr" ?></p>
+                    <p>
+                        <?php if ($product['discount'] !== null) : ?>
+                            <?= "Réduction avec le code 'Géraud' : " . $product['discount'] . "%" ?>
+                        <?php else: ?>
+                            <?= "Aucune réduction disponible" ?>
+                        <?php endif; ?>
+                    </p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
     </main>
+
+
 
     <?php include('footer.php'); ?>
 </body>
