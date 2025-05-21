@@ -11,7 +11,7 @@ $keywords = "Liste, Prix, Image";
 <body class="text-white" style="background-color: #2e2e2e;">
    
 
-    <main class="container py-4">
+    <main>
         <?php
         $iphone = [
             "name" => "iPhone",
@@ -22,7 +22,7 @@ $keywords = "Liste, Prix, Image";
         ];
         ?>
 
-        <div>
+        <div class="container py-4">
             <img src="<?= $iphone["picture_url"] ?>" class="imgIphone" alt="<?= $iphone["name"] ?>">
         <div>
             <p><h2>Caractéristiques :</h2></p>

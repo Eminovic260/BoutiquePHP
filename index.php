@@ -14,6 +14,11 @@ $keywords = "accueil, produits, offres spéciales";
 
     <main>
         <p>Bienvenue sur la page d'accueil.</p>
+        <p>Bienvenue sur la page d'accueil.</p>
+        <p>Bienvenue sur la page d'accueil.</p>
+        <p>Bienvenue sur la page d'accueil.</p>
+        <p>Bienvenue sur la page d'accueil.</p>
+
 
     </main>
 

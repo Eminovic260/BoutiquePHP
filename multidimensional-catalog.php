@@ -11,7 +11,7 @@
             "name" => "Crevette",
             "price" => 200,
             "weight" => 10,
-            "discount" => 10,
+            "discount" => 70,
             "pictureUrl" => "images/Crevette.jpg",
         ],
         "Sardine" => [
@@ -26,31 +26,26 @@
 
 
     <div>
-        <p>
         <h2>Produits :</h2>
-        </p>
     </div>
-<div class="container4">
-    <div class="pdt">
-        <a href="item.php"><img src="<?= $products["Poisson"]["pictureUrl"] ?>" class="imgI" alt="<?= $products["name"] ?>"></a>
-        <h3><?= $products["Poisson"]["name"] ?></h3>
-        <p><?= "Prix : " . $products["Poisson"]["price"] . "€" ?></p>
-        <p><?= "Poid : " . $products["Poisson"]["weight"] . "Gr" ?></p>
-        <p><?= "Réduction avec le code 'Géraud' : " . $products["Poisson"]["discount"] . "%" ?></p>
-        
-    </div>
-    <div class="pdt">
-        <a href="item2.php"><img src="<?= $products["Crevette"]["pictureUrl"] ?>" class="imgI" alt="<?= $products["name"] ?>"></a>
-        <h3><?= $products["Crevette"]["name"] ?></h3>
-        <p><?= "Prix : " . $products["Crevette"]["price"] . "€" ?></p>
-        <p><?= "Poid : " . $products["Crevette"]["weight"] . "Gr" ?></p>
-        <p><?= "Réduction avec le code 'Géraud' : " . $products["Crevette"]["discount"] . "%" ?></p>
-    </div>
-    <div class="pdt">
-        <a href="item3.php"><img src="<?= $products["Sardine"]["pictureUrl"] ?>" class="imgI" alt="<?= $products["name"] ?>"></a>
-        <h3><?= $products["Sardine"]["name"] ?></h3>
-        <p><?= "Prix : " . $products["Sardine"]["price"] . "€" ?></p>
-        <p><?= "Poid : " . $products["Sardine"]["weight"] . "Gr" ?></p>
-        <p><?= "Réduction avec le code 'Géraud' : " . $products["Sardine"]["discount"] . "%" ?></p>
-    </div>
+
+
+    <div class="container4">
+        <?php foreach ($products as $product) : ?>
+            <div class="pdt">
+                <a href="<?= $product['link'] ?>">
+                    <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
+                </a>
+                <h3><?= $product['name'] ?></h3>
+                <p><?= "Prix : " . $product['price'] . "€" ?></p>
+                <p><?= "Poid : " . $product['weight'] . "Gr" ?></p>
+                <p>
+                    <?php if ($product['discount'] !== null) : ?>
+                        <?= "Réduction avec le code 'Géraud' : " . $product['discount'] . "%" ?>
+                    <?php else: ?>
+                        <?= "Aucune réduction disponible" ?>
+                    <?php endif; ?>
+                </p>
+            </div>
+        <?php endforeach; ?>
     </div>
