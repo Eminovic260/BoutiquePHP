@@ -42,7 +42,7 @@ function renderProducts(array $products)
                 <p>Poids : <?= $product['weight'] ?> Gr</p>
 
 
-                <form method="post" action="add-to-cart.php">
+                <form method="post" action="panier.php">
                     <label class="qtt" for="quantity_<?= $product['id'] ?>">Quantité :</label>
                     <input class="inputQuantity" type="number" name="quantity" id="quantity_<?= $product['id'] ?>" value="1" min="1">
 

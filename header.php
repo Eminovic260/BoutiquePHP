@@ -44,6 +44,9 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
                     <li class="nav-item">
                         <a class="nav-link" href="simple-catalog.php">Catalogue</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="panier.php">Panier</a>
+                    </li>
                 </ul>
             </div>
         </div>

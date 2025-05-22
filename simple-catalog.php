@@ -35,7 +35,7 @@ $keywords = "Liste, Prix, Image";
                     <p><?= "Aucune réduction disponible" ?></p>
                 <?php endif; ?>
 
-                <form method="post" action="add-to-cart.php">
+                <form method="post" action="panier.php">
                     <label class="qtt" for="quantity_<?= $product['id'] ?>">Quantité :</label>
                     <input class="inputQuantity" type="number" name="quantity" id="quantity_<?= $product['id'] ?>" value="1" min="1">
 

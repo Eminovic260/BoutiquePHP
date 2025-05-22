@@ -30,6 +30,16 @@ $products = [
         "link" => "item3.php",
         "category" => "Bulot"
     ],
+    [
+        "id" => 4,
+        "name" => "Saumon Gravlax",
+        "price" => 400,
+        "weight" => 200,
+        "discount" => null,
+        "pictureUrl" => "images/gravlax.jpg",
+        "link" => "item4.php",
+        "category" => "Saumon"
+    ],
 ];
 
 ?>
