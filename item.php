@@ -1,8 +1,8 @@
 <?php
-$title = "Poisson Rouge";
+$title = "Huitre";
 include('my-functions.php');
 
-$category = "Poisson Rouge";
+$category = "Huitre";
 $filteredProducts = array_filter($products, function ($product) use ($category) {
     return $product['category'] === $category;
 });
@@ -12,7 +12,6 @@ $filteredProducts = array_filter($products, function ($product) use ($category) 
 
     <?php include('header.php'); ?>
 
-    <h2>Produits : <?= $title ?></h2>
 
     <?php renderProducts($filteredProducts); ?>
 

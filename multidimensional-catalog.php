@@ -1,30 +1,35 @@
 <?php
 $products = [
     [
-        "name" => "Poisson Rouge",
+        "id" => 1,
+        "name" => "Huitre",
         "price" => 100,
         "weight" => 30,
         "discount" => 10,
-        "pictureUrl" => "images/Poisson.jpg",
+        "pictureUrl" => "images/huitres.jpg",
         "link" => "item.php",
-        "category" => "Poisson Rouge"
+        "category" => "Huitre"
     ],
     [
+        "id" => 2,
         "name" => "Crevette",
         "price" => 200,
         "weight" => 10,
         "discount" => 70,
-        "pictureUrl" => "images/Crevette.jpg",
+        "pictureUrl" => "images/Cre.jpg",
         "link" => "item2.php",
         "category" => "Crevette"
     ],
     [
-        "name" => "Sardine",
+        "id" => 3,
+        "name" => "Bulot",
         "price" => 300,
         "weight" => 200,
         "discount" => null,
-        "pictureUrl" => "images/Sardine.jpg",
+        "pictureUrl" => "images/bulots.jpg",
         "link" => "item3.php",
-        "category" => "Sardine"
+        "category" => "Bulot"
     ],
 ];
+
+?>

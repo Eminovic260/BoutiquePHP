@@ -1,17 +1,14 @@
 body {
+    background-color: #f1f1f1;
     font-family: "Inria Serif", serif;
-    color: #f1f1f1;
 }
 
 
-h1 {
-    font-size: 4vw;
-    margin-top: 20rem;
-}
+
 
 h2 {
     margin-top: 5rem;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     font-size: 2vw;
     margin-left: 3rem;
 }
@@ -23,68 +20,287 @@ h3 {
     border: solid 1px white;
     padding: 1rem;
     text-align: center;
+    background-color: #d6cfc7;
+    /* sable */
+    color: #1f2f3d;
 }
 
 h4 {
     font-size: 1vw
 }
 
-p {
-    font-size: 1.5rem;
-    margin: auto;
-    padding: 1rem;
+
+
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 8vw;
+        margin-top: 10rem;
+    }
+
+    h2 {
+        font-size: 4vw;
+        margin-left: 1rem;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 30vw;
+    }
+
+    footer .logo {
+        max-height: 60px;
+    }
+
+    footer a.btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .pdt {
+        width: 100%;
+
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container4 {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .pdt {
+        width: 100%;
+        margin-bottom: 2rem;
+        margin: 0;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        /* Un peu d'espacement vertical pour les petits écrans */
+    }
+
 }
 
 /* ----------------------------------------- css HEADER ----------------------------------------- */
 
+
 .logo {
-    width: 8vw;
-    justify-content: center;
+    height: 120px; 
+    width: auto;
 }
 
-.drapeau {
-    width: 3vw;
+.navbar {
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.navbar-nav {
+    margin-left: auto;
+
 }
 
-.pays {
-    padding-right: 1vw;
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1;
 }
 
+.navbar-collapse {
+    font-size: 1.5rem;
+}
 
+.navbar-nav .nav-link {
+    color: #f1f1f1;
+    /* Texte blanc pour les liens */
+    font-size: 1.5rem;
+    margin-right: 3rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #8aa39b;
+    /* Couleur vert d'eau pour le survol */
+    text-decoration: underline;
+}
+
+.bg-custom-dark {
+    background-color: #1f2f3d;
+    /* Gris foncé, pour s'harmoniser avec le corps */
+}
+
+.navbar-collapse {
+    font-size: 1.2rem;
+    /* Taille du texte dans la barre de navigation */
+}
 
 /* ------------------------------CSS FOOTER---------------------------- */
 
 
 footer {
-    grid-area: f;
+    background-color: #1f2f3d;
+}
 
+footer a.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+footer a.btn:hover {
+    transform: scale(1.1);
+    background-color: #444;
+}
+
+footer .logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+
+/* ------------------------------Index---------------------------- */
+
+.avis {
+    display: flex;
+    justify-content: center;
+}
+.avisClients{
+    width: 20vw;
+    height: auto;
+    margin: auto;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+}
+
+.banner {
+    background-image: url("images/vente.jpg");
+    background-size: cover;
+    background-position: 50% 65%;
+    padding: 10rem 2rem;
+    text-align: center;
+    position: relative;
+    color: #f1f1f1;
+}
+.banner1 {
+    margin-bottom: 2vw;
+    background-image: url("images/platoo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    padding: 10rem 2rem;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.titreAcceuil {
+    font-size: 3vw;
+    background-color: rgba(0, 0, 0, 0.6); /* fond semi-transparent derrière le texte */
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 10px;
 }
 
 
 
+/* ------------------------------CORPS---------------------------- */
 
 
 
 .container4 {
     display: flex;
-    justify-content: space-between;
-
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 2rem;
 }
+
+
 
 .pdt {
+    background-color: #1f2f3d;
+    width: 20vw;
+    display: flex;
     flex-direction: column;
-    margin: auto;
-    margin-bottom: 10rem;
-    box-shadow: #f1f1f1 0px 0px 20px 5px;
+    align-items: stretch;
+    padding: 1rem;
+    box-shadow: #1f2f3d 0px 0px 5px 5px;
     border-radius: 20px;
 }
+
+
+
 
 .imgI {
     border-radius: 20px;
-    width: 25rem;
+    width: 100%;
     height: 18rem;
+    object-fit: cover;
+    display: block;
 }
-.imgphone {
-    width: 10rem;
-    height: auto;
+
+.inputQuantity {
+    width: 80px;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 2px solid #8aa39b;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: #1f2f3d;
+}
+
+.ajoutPanierbtn {
+    background-color: #e08a7c;
+    /* corail doux */
+    color: #f1f1f1;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.ajoutPanierbtn:hover {
+    background-color: #d97b6b;
+}
+
+.pdt p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 1;
+    line-height: 1.4;
+    color: #f1f1f1;
+}
+.qtt {
+    color: #f1f1f1;
 }

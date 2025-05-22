@@ -8,22 +8,27 @@ $keywords = "accueil, produits, offres spéciales";
 
 <?php include('header.php'); ?>
 
-<body style="background-color: #2e2e2e;">
 
 
 
-    <main>
-        <p>Bienvenue sur la page d'accueil.</p>
-        <p>Bienvenue sur la page d'accueil.</p>
-        <p>Bienvenue sur la page d'accueil.</p>
-        <p>Bienvenue sur la page d'accueil.</p>
-        <p>Bienvenue sur la page d'accueil.</p>
+<main>
+    <div class="banner">
+        <h1 class="titreAcceuil">PLATEAU DE FRUITS DE MER ET TRAITEUR</h1>
+    </div>
+
+    
+    <div class="avis">
+        <img class="avisClients" src="images/avis1.png" alt="avis">
+        <img class="avisClients" src="images/avis2.png" alt="avis">
+        <img class="avisClients" src="images/avis3.png" alt="avis">
+        <img class="avisClients" src="images/avis4.png" alt="avis">
+    </div>
 
 
-    </main>
+</main>
 
 
-    <?php include('footer.php'); ?>
+<?php include('footer.php'); ?>
 
 
 
