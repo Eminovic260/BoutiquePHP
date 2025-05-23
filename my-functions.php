@@ -22,33 +22,36 @@ function discountedPrice($priceCents, $discountPercent)
 function renderProducts(array $products)
 {
 ?>
-    <div class="container4">
+    <div>
         <?php foreach ($products as $product): ?>
-            <div class="pdt">
+            <div class="fichepdt">
                 <a href="<?= $product['link'] ?>">
-                    <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
+                    <img src="<?= $product['pictureUrl'] ?>" class="imgFiche" alt="<?= $product['name'] ?>">
                 </a>
-                <h3><?= $product['name'] ?></h3>
+                <div class="infopdt">
+                    <h3><?= $product['name'] ?></h3>
 
-                <p>Prix TTC : <?= formatPrice($product['price']) ?></p>
-                <p>Prix HT : <?= formatPrice(priceExcludingVAT($product['price'])) ?></p>
-                <?php if ($product['discount'] !== null): ?>
-                    <p>Prix remisé TTC : <?= discountedPrice($product['price'], $product['discount']) ?></p>
-                    <p>Réduction avec le code 'Géraud' : <?= $product['discount'] ?>%</p>
-                <?php else: ?>
-                    <p>Aucune réduction disponible</p>
-                <?php endif; ?>
+                    <p>Prix TTC : <?= formatPrice($product['price']) ?></p>
+                    <p>Prix HT : <?= formatPrice(priceExcludingVAT($product['price'])) ?></p>
+                    <?php if ($product['discount'] !== null): ?>
+                        <p>Prix remisé TTC : <?= discountedPrice($product['price'], $product['discount']) ?></p>
+                        <p>Réduction avec le code 'Léa' : <?= $product['discount'] ?>%</p>
+                    <?php else: ?>
+                        <p>Aucune réduction disponible</p>
+                    <?php endif; ?>
 
-                <p>Poids : <?= $product['weight'] ?> Gr</p>
+                    <p>Poids : <?= $product['weight'] ?> Gr</p>
 
+                    <div class="btnFichePdt">
+                        <form method="post" action="cart.php">
+                            <label class="qtt" for="quantity_<?= $product['id'] ?>">Quantité :</label>
+                            <input class="inputQuantity" type="number" name="quantity" id="quantity_<?= $product['id'] ?>" value="1" min="1">
 
-                <form method="post" action="panier.php">
-                    <label class="qtt" for="quantity_<?= $product['id'] ?>">Quantité :</label>
-                    <input class="inputQuantity" type="number" name="quantity" id="quantity_<?= $product['id'] ?>" value="1" min="1">
-
-                    <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
-                    <button class="ajoutPanierbtn" type="submit">Ajouter à la composition</button>
-                </form>
+                            <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                            <button class="ajoutPanierbtn" type="submit">Ajouter à la composition</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
         <?php endforeach; ?>

@@ -1,8 +1,8 @@
 <?php
-$title = "Huitre";
+$title = "Sushi";
 include('my-functions.php');
 
-$category = "Huitre";
+$category = "Sushi";
 $filteredProducts = array_filter($products, function ($product) use ($category) {
     return $product['category'] === $category;
 });

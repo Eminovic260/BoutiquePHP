@@ -1,8 +1,8 @@
 <?php
-$title = "Huitre";
+$title = "Pince de Tourteau";
 include('my-functions.php');
 
-$category = "Huitre";
+$category = "Pince de Tourteau";
 $filteredProducts = array_filter($products, function ($product) use ($category) {
     return $product['category'] === $category;
 });

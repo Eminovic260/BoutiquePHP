@@ -189,6 +189,8 @@ footer p {
     justify-content: space-around;
     gap: 2rem;
     padding: 2rem;
+    margin-top: 7vh;
+    margin-bottom: 5vh;
 }
 
 
@@ -201,12 +203,43 @@ footer p {
     padding: 1rem;
     box-shadow: #1f2f3d 0px 0px 5px 5px;
     border-radius: 20px;
-    width: 40vh; /* ou 90% en mobile, déjà fait dans @media */
-    min-height: 500px; /* adapte cette valeur selon ton besoin */
+    width: 40vh;
+    /* ou 90% en mobile, déjà fait dans @media */
+    min-height: 500px;
     justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.pdt:hover {
+    transform: translateY(-20px); /* déplace vers le haut de 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2); /* ombre plus marquée */
+}
 
+.fichepdt {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-right: 40vh;
+}
+
+.imgFiche {
+    width: 60vh;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
+
+}
+
+.infopdt {
+    font-size: 1.5rem;
+}
+
+.infopdt p {
+    padding: 1.5rem;
+}
 
 
 .imgI {
@@ -254,4 +287,42 @@ footer p {
 
 .qtt {
     color: #f1f1f1;
+}
+
+
+/* ------------------------------PANIER---------------------------- */
+
+.titrePanier {
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    text-align: center;
+}
+
+.tabPanier {
+    width: 150vh;
+    font-size: 1.2rem;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5vh;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-bottom: 1rem ;
+}
+
+
+.tabPanier1 {
+    margin-left: 13vh;
+}
+
+.tabPanier1 td,
+.tabPanier1 th {
+    font-size: 1.2rem;
+    border: 1px solid black;
+    padding: 0.9rem;
+}
+
+.btnSupPanier {
+    margin-top: 6vh;
+    margin-bottom: 8vh;
+    margin-left: 13vh;
 }
