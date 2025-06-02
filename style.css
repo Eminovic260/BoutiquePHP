@@ -147,7 +147,7 @@ footer p {
 }
 
 .banner {
-    background-image: url("images/vente.jpg");
+    background-image: url("image/vente.jpg");
     background-size: cover;
     background-position: 50% 65%;
     padding: 10rem 2rem;
@@ -158,7 +158,7 @@ footer p {
 
 .banner1 {
     margin-bottom: 2vw;
-    background-image: url("images/platoo.jpg");
+    background-image: url("image/platoo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 60%;

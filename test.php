@@ -32,3 +32,5 @@
         // echo "<p>Premier produit : " . $products[0] . "</p>";
         //  echo "<p>Dernier produit : " . $products[count($products) - 1] . "</p>";
         ?>
+
+

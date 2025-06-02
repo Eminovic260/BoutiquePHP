@@ -20,10 +20,10 @@ $keywords = "accueil, produits, offres spéciales";
 
     
     <div class="avis">
-        <img class="avisClients" src="images/avis1.png" alt="avis">
-        <img class="avisClients" src="images/avis2.png" alt="avis">
-        <img class="avisClients" src="images/avis3.png" alt="avis">
-        <img class="avisClients" src="images/avis4.png" alt="avis">
+        <img class="avisClients" src="image/avis1.png" alt="avis">
+        <img class="avisClients" src="image/avis2.png" alt="avis">
+        <img class="avisClients" src="image/avis3.png" alt="avis">
+        <img class="avisClients" src="image/avis4.png" alt="avis">
     </div>
 
 

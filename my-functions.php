@@ -1,5 +1,4 @@
 <?php
-include('multidimensional-catalog.php');
 
 function formatPrice($prixCent)
 {
@@ -26,7 +25,7 @@ function renderProducts(array $products)
         <?php foreach ($products as $product): ?>
             <div class="fichepdt">
                 <a href="<?= $product['link'] ?>">
-                    <img src="<?= $product['pictureUrl'] ?>" class="imgFiche" alt="<?= $product['name'] ?>">
+                    <img src="<?= htmlspecialchars($product['img_url']) ?>" class="imgFiche" alt="<?= $product['name'] ?>">
                 </a>
                 <div class="infopdt">
                     <h3><?= $product['name'] ?></h3>

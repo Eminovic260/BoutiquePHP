@@ -1,7 +1,7 @@
-  <?php/*
+<!-- /*
 $products = [
     [
-        "id" => 1,
+       "id" => 1,
         "name" => "Huitre",
         "price" => 100,
         "weight" => 80,
@@ -72,4 +72,4 @@ $products = [
     ],
 ];
 
-?>*/
+*/ -->

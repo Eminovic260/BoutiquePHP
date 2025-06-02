@@ -2,7 +2,7 @@
     <div class="container-fluid d-flex justify-content-evenly align-items-center">
         <!-- Logo -->
         <a href="index.php">
-            <img src="images/Logo.png" alt="logo E.B" class="logo">
+            <img src="image/logo.png" alt="logo E.B" class="logo">
         </a>
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/emin-bahous-118390220/" target="_blank" class="btn btn-primary btn-lg rounded-circle mx-2" style="background-color: #2e2e2e;">

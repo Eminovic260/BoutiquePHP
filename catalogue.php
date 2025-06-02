@@ -9,7 +9,6 @@ $keywords = "Liste, Prix, Image";
 <?php include('my-functions.php'); ?>
 
 <?php
-require_once 'database.php';
 $products = afficherProduits($mysqlClient);
 ?>
 
@@ -22,8 +21,8 @@ $products = afficherProduits($mysqlClient);
     <div class="container4">
         <?php foreach ($products as $product) : ?>
             <div class="pdt">
-                <a href="<?= $product['link'] ?>">
-                    <img src="<?= $product['pictureUrl'] ?>" class="imgI" alt="<?= $product['name'] ?>">
+                <a>
+                    <img src="<?= htmlspecialchars($product['img_url']) ?>" class="imgI" alt="<?= htmlspecialchars($product['name']) ?>">
                 </a>
                 <h3><?= $product['name'] ?></h3>
                 <p><?= "Prix TTC : " . formatPrice($product['price']) ?></p>

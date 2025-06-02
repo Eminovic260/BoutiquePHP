@@ -13,7 +13,7 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
     <meta name="description" content="<?= $description ?>">
     <meta name="keywords" content="<?= $keywords ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/Logo.png" type="image/x-icon">
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
@@ -21,8 +21,9 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
     <title><?= $title ?></title>
 </head>
 
-<?php require_once 'database.php'; ?>
-
+<?php
+require_once 'database.php';
+?>
 
 
 
@@ -31,7 +32,7 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
         <div class="container-fluid">
             <!-- Logo aligné à gauche -->
             <a href="index.php">
-                <img src="images/Logo.png" alt="logo E.B" class="logo">
+                <img src="image/logo.png" alt="logo E.B" class="logo">
             </a>
             <!-- Nom de la marque -->
             <a class="navbar-brand" href="index.php">E.B</a>
