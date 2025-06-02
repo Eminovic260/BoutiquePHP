@@ -1,3 +1,5 @@
+
+
 <?php
 // Définir les valeurs spécifiques pour la page d'accueil
 $title = "Accueil";

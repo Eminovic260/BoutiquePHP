@@ -1,6 +1,4 @@
 <?php
-session_start();
-include('multidimensional-catalog.php');
 include('my-functions.php');
 
 // Vider le panier si demandé

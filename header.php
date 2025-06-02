@@ -21,6 +21,7 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
     <title><?= $title ?></title>
 </head>
 
+<?php require_once 'database.php'; ?>
 
 
 

@@ -8,8 +8,10 @@ $keywords = "Liste, Prix, Image";
 <?php include('header.php'); ?>
 <?php include('my-functions.php'); ?>
 
-
-
+<?php
+require_once 'database.php';
+$products = afficherProduits($mysqlClient);
+?>
 
 <main>
 

@@ -1,4 +1,4 @@
-<?php
+  <?php/*
 $products = [
     [
         "id" => 1,
@@ -34,7 +34,7 @@ $products = [
         "id" => 4,
         "name" => "Saumon Gravlax",
         "price" => 400,
-        "weight" => 200,
+        "weight" => 100,
         "discount" => null,
         "pictureUrl" => "images/gravlax.jpg",
         "link" => "item4.php",
@@ -72,4 +72,4 @@ $products = [
     ],
 ];
 
-?>
+?>*/
