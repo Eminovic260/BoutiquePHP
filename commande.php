@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 // Définir les valeurs spécifiques pour la page d'accueil
 $title = "Commande";
 $description = "Retrouvez vos commandes";

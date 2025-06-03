@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 // Définir les valeurs spécifiques pour la page d'accueil
 $title = "Accueil";
 $description = "Bienvenue sur notre page d'accueil";
@@ -29,10 +33,6 @@ $keywords = "accueil, produits, offres spéciales";
 
 
 <?php include('footer.php'); ?>
-
-
-
-
 </body>
 
 </html>

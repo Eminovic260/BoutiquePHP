@@ -21,6 +21,7 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
     <title><?= $title ?></title>
 </head>
 
+<body>
 <?php
 require_once 'database.php';
 ?>
@@ -47,7 +48,7 @@ require_once 'database.php';
                         <a class="nav-link" href="catalogue.php">Catalogue</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.php">Panier</a>
+                        <a class="nav-link" href="panier.php">Panier</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="commande.php">Commande</a>
@@ -59,4 +60,3 @@ require_once 'database.php';
 </header>
 
 
-<body>

@@ -1,4 +1,9 @@
 <?php
+session_start();
+?>
+
+
+<?php
 // Définir les valeurs spécifiques pour la page d'accueil
 $title = "Catalogue";
 $description = "Découvrez nos produits!";
