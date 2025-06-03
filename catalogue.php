@@ -8,15 +8,30 @@ $keywords = "Liste, Prix, Image";
 <?php include('header.php'); ?>
 <?php include('my-functions.php'); ?>
 
+
 <?php
 $products = afficherProduits($mysqlClient);
+$filter = $_GET['filter'] ?? null;
+$products = trierProduits($mysqlClient, $filter);
 ?>
+
+
 
 <main>
 
     <div class="banner1">
         <h1 class="titreAcceuil">COMPOSITION DE PLATEAU ET TRAITEUR</h1>
     </div>
+
+
+    <div class='btnTrier'>
+        <a href="?filter=tout" class="btnTriier">Tout</a>
+        <a href="?filter=1" class="btnTriier">Coquillages</a>
+        <a href="?filter=2" class="btnTriier">Crustacés</a>
+        <a href="?filter=3" class="btnTriier">Traiteur</a>
+    </div>
+
+
 
     <div class="container4">
         <?php foreach ($products as $product) : ?>

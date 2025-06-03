@@ -211,8 +211,10 @@ footer p {
 }
 
 .pdt:hover {
-    transform: translateY(-20px); /* déplace vers le haut de 10px */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 2); /* ombre plus marquée */
+    transform: translateY(-20px);
+    /* déplace vers le haut de 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2);
+    /* ombre plus marquée */
 }
 
 .fichepdt {
@@ -290,6 +292,24 @@ footer p {
 }
 
 
+.btnTrier{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.btnTriier {
+     border: solid black 1px;
+     padding-left: 1.5rem;
+     padding-bottom: 1rem;
+     padding-top: 1rem;
+     padding-right: 1.5rem;
+     font-size: 1.3rem;
+     background-color: #1f2f3d;
+     color: #f1f1f1;
+     border-radius: 5px;
+}
 /* ------------------------------PANIER---------------------------- */
 
 .titrePanier {
@@ -306,7 +326,7 @@ footer p {
     border-spacing: 5vh;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    margin-bottom: 1rem ;
+    margin-bottom: 1rem;
 }
 
 

@@ -19,4 +19,3 @@ if (isset($_POST['product_id'], $_POST['quantity'])) {
 // Redirection vers le catalogue après ajout
 header('Location: catalogue.php');
 exit();
-?>

@@ -49,6 +49,9 @@ require_once 'database.php';
                     <li class="nav-item">
                         <a class="nav-link" href="cart.php">Panier</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="commande.php">Commande</a>
+                    </li>
                 </ul>
             </div>
         </div>
