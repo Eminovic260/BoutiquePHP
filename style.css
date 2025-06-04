@@ -149,7 +149,7 @@ footer p {
 .banner {
     background-image: url("image/vente.jpg");
     background-size: cover;
-    background-position: 50% 65%;
+    background-position: 50% 85%;
     padding: 10rem 2rem;
     text-align: center;
     position: relative;
@@ -296,7 +296,8 @@ footer p {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .btnTriier {

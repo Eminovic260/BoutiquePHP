@@ -1,4 +1,7 @@
 <?php
+require_once 'database.php';
+?>
+<?php
 // Définir des valeurs par défaut
 $title = isset($title) ? $title : "Mon Site Web";  // Valeur par défaut pour le titre
 $description = isset($description) ? $description : "Bienvenue sur notre site web.";  // Valeur par défaut pour la description
@@ -22,41 +25,32 @@ $keywords = isset($keywords) ? $keywords : "accueil, site web, produits";  // Va
 </head>
 
 <body>
-<?php
-require_once 'database.php';
-?>
 
 
 
-<header>
-    <nav class="navbar navbar-expand-lg bg-custom-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-            <!-- Logo aligné à gauche -->
-            <a href="index.php">
-                <img src="image/logo.png" alt="logo E.B" class="logo">
-            </a>
-            <!-- Nom de la marque -->
-            <a class="navbar-brand" href="index.php">E.B</a>
-
-            <!-- Navigation avec alignement à droite -->
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalogue.php">Catalogue</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="panier.php">Panier</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="commande.php">Commande</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-custom-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="index.php">
+                    <img src="image/logo.png" alt="Logo Maison Emin" class="logo me-2">
+                    <div>
+                        <div>Maison Emin</div>
+                        <small class="text-white-50 fs-5">Salaison et Coquillage</small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogue.php">Catalogue</a></li>
+                        <li class="nav-item"><a class="nav-link" href="panier.php">Panier</a></li>
+                        <li class="nav-item"><a class="nav-link" href="commande.php">Commande</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
 
-
+    </header>

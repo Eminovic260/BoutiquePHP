@@ -18,7 +18,7 @@ $keywords = "accueil, produits, offres spéciales";
 <main>
     <div class="banner">
         <h1 class="titreAcceuil">PLATEAU DE FRUITS DE MER ET TRAITEUR</h1>
-    </div>
+    
 
 
     <div class="avis">
@@ -27,7 +27,7 @@ $keywords = "accueil, produits, offres spéciales";
         <img class="avisClients" src="image/avis3.png" alt="avis">
         <img class="avisClients" src="image/avis4.png" alt="avis">
     </div>
-
+</div>
 
 </main>
 

@@ -3,43 +3,37 @@ session_start();
 include('header.php');
 include('my-functions.php');
 
-// Définir les valeurs spécifiques pour la page d'accueil
 $title = "Panier";
 $description = "Découvrez votre commande !";
 $keywords = "Liste, Prix, récapitulatif";
-?>
 
-<?php
-
+// vider panier
 if (isset($_POST['clear_cart'])) {
     unset($_SESSION['panier']);
     header('Location: panier.php');
     exit();
 }
 
-// Ajouter produit au panier
+// ajout produit au panier
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'], $_POST['quantity'])) {
-    $productId = (int) $_POST['product_id'];
-    $quantity = (int) $_POST['quantity'];
+    $productId = (int)$_POST['product_id'];
+    $quantity = (int)$_POST['quantity'];
 
-    // Vérifie si le panier existe
     if (!isset($_SESSION['panier'])) {
         $_SESSION['panier'] = [];
     }
 
-    // Si le produit est déjà dans le panier, on ajoute la quantité
     if (isset($_SESSION['panier'][$productId])) {
         $_SESSION['panier'][$productId] += $quantity;
     } else {
         $_SESSION['panier'][$productId] = $quantity;
     }
 
-   
     header('Location: catalogue.php');
     exit();
 }
 
-// Récupération des détails produits depuis la base
+// Récupérer les détails des produits dans le panier
 $cartItems = [];
 $total = 0;
 
@@ -63,6 +57,47 @@ if (!empty($_SESSION['panier'])) {
             'line_total' => $lineTotal
         ];
     }
+}
+
+// validation commande
+if (isset($_POST['envoi_Commande']) && !empty($cartItems)) {
+    $totalWeight = 0;
+    $totalOrder = 0;
+
+    foreach ($cartItems as $item) {
+        $totalWeight += $item['product']['weight'] * $item['quantity'];
+        $totalOrder += $item['line_total'];
+    }
+
+    $date = date('Y-m-d');
+    $number = date('Ymd'); // Numéro unique commande
+    $shippingCost = 3;        // Fixe ou calculé
+    $carrierId = 1;           // À adapter
+    $customerId = 1;          // À adapter (session ou autre)
+
+    // Insérer commande
+    $stmt = $mysqlClient->prepare("
+        INSERT INTO orders (number, total, date, total_weight, shipping_cost, carrier_id, customer_id)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    ");
+
+    $stmt->execute([$number, $totalOrder, $date, $totalWeight, $shippingCost, $carrierId, $customerId]);
+    $orderId = $mysqlClient->lastInsertId();
+
+    // Insérer produits commandés
+    $stmtItem = $mysqlClient->prepare("
+        INSERT INTO order_product (order_id, product_id, quantity, total_weight)
+        VALUES (?, ?, ?, ?)
+    ");
+
+    foreach ($cartItems as $item) {
+        $weight = $item['product']['weight'] * $item['quantity'];
+        $stmtItem->execute([$orderId, $item['product']['id'], $item['quantity'], $weight]);
+    }
+
+    unset($_SESSION['panier']);
+    header("Location: index.php?order_id=" . $orderId);
+    exit();
 }
 ?>
 
@@ -98,8 +133,12 @@ if (!empty($_SESSION['panier'])) {
         <button type="submit" name="clear_cart">Vider la composition</button>
     </form>
 
-
-
+    <?php if (!empty($cartItems)) : ?>
+    <form method="post" action="panier.php" class="btnEnvoiCommande">
+        <button type="submit" name="envoi_Commande">Valider la composition</button>
+    </form>
+    <?php endif; ?>
 </main>
+
 <?php include('footer.php'); ?>
 </body>
